@@ -4,8 +4,8 @@
 1. Check out the develop branch of movie_api repository
 2. Open the Maven project using Eclipse
 3. Install TestNG into Eclipse if you have not
-4. Execute each java class by TestNG
-
+4. Single mode - Execute each java class as TestNG
+5. Batch mode - run as TestNG from testng.xml
 
 
 << Bug Found >>
