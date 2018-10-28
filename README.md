@@ -8,7 +8,6 @@
 5. Batch mode - run as TestNG from testng.xml
 
 
-
 << Bug Found >>
 1. Bug-001 - parameter "count" does not work. The response is always have all movies (total 16),
    no matter the count value (not 0, like 1 or 10)
