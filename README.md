@@ -1,4 +1,4 @@
-# movie_api
+# README - movie_api
 
 << How to Run >>
 1. Check out the develop branch of movie_api repository
