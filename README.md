@@ -17,6 +17,7 @@
 
 
 << Test execution report >>
+
 SPL-001: No two movies should have the same image 
 
 Test result: Same image not found. 
