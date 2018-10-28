@@ -12,7 +12,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class testParamCountNum extends testUtility{
 	
-	@Test
+	@Test(groups="function")
 	public void testParamCount(){
 		//
 		// Test param(count, number) - this test failed because count does not work [Bug-001] 

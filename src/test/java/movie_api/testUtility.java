@@ -1,5 +1,10 @@
 package movie_api;
 
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+
 import java.util.HashSet;
 
 public class testUtility {
@@ -8,6 +13,16 @@ public class testUtility {
 	static final int EXPECT_ALL = 0;
 	static final int EXPECT_NUM_10 = 10;
 	
+	@BeforeTest
+	public void testBeforeTest() {
+		System.out.println("testBeforeTest()");
+	}
+
+	@AfterTest
+	public void testAfterTest() {
+		System.out.println("testAfterTest()");
+	}	
+
 	// find if a title contains another title
 	public static int checkTitle(String s, HashSet<String> set){
 		int count = 0;

@@ -17,7 +17,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class testSortMovie extends testUtility {
 	
-	@Test
+	@Test(groups="function")
 	public void SortMovie_ByGenreId()
 	{
 		//

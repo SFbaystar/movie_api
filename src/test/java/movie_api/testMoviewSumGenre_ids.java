@@ -12,7 +12,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class testMoviewSumGenre_ids extends testUtility {
 	
-	@Test
+	@Test(groups="function")
 	public void VerifyMovieSumGenre_Ids()
 	{
 		//

@@ -7,7 +7,7 @@ import static movie_api.testUtility.*;
 
 public class testPostMovieData {
 	
-	@Test
+	@Test(groups="basic")
 	public void test_Post() {
 		
         given().

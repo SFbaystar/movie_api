@@ -10,7 +10,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class testGetResponseCode extends testUtility {
 	
-	@Test
+	@Test(groups="basic")
 	public void testResponseStatusCode(){
 		
 		RestAssured.baseURI = SPLUNK_URI;		

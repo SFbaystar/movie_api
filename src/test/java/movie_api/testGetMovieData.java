@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.*;
 
 public class testGetMovieData extends testUtility {
 	
-	@Test
+	@Test(groups="basic")
 	public void test_Get() {
 		//
 		// check the uri and GET api basic

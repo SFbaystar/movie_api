@@ -14,7 +14,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class testVerifyUniquePostImage extends testUtility {
 	
-	@Test
+	@Test(groups="function")
 	public void VerifyUniqueImageInJsonResponse()
 	{
 		//

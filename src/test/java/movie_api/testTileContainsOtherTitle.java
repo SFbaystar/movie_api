@@ -14,7 +14,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class testTileContainsOtherTitle extends testUtility {
 	
-	@Test
+	@Test(groups="function")
 	public void testTwoTileContainsOtherTitle() {
 		//
 		// SPL-006: There are at least two movies in the database whose title contain the title of another movie

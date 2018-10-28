@@ -12,7 +12,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class testPalindromeWordInTitle extends testUtility{
 	
-	@Test
+	@Test(groups="function")
 	public void testPalindromeTitle() {
 		//
 		// SPL-005: There is at least one movie in the database whose title has a palindrome in it
