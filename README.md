@@ -38,3 +38,12 @@ Test result: Found palindrome word in title.
 SPL-006: There are at least two movies in the database whose title contain the title of another movie. Example: movie id: 287757 (Scooby-Doo Meets Dante), movie id: 404463 (Dante). This example shows one such set. The business requirement is that there are at least two such occurrences. 
 
 Test result: Confirmed there are at least two movies whose title contain the title of another movie.
+
+
+Rest API "GET" has been tested
+Result – Status code: 200
+Return result with 16 movies' information details.
+
+Rest API "POST" has been tested
+Result – Status 200
+{ "message": "Splunking your submission using monkeys ..... success... movie posted to catalog" }
