@@ -60,7 +60,8 @@ public class testVerifyUniquePostImage extends testUtility {
         			postSet.add(poster_path);
         		else
         			Assert.assertTrue(false, "same post found");
-            	System.out.println(poster_path);
+            	
+			//System.out.println(poster_path);
         	}
         }
         Assert.assertTrue(true, "No same image");

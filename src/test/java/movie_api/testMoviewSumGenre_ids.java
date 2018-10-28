@@ -45,7 +45,7 @@ public class testMoviewSumGenre_ids extends testUtility {
         	if( count>400 )
         		total++;
         }
-        System.out.println("Total count: "+ total);
+        //System.out.println("Total count: "+ total);
         Assert.assertEquals(total<=7, true);
 
 	}
