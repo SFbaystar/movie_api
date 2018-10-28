@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+  <test name="movie_api">
+  
+	<groups>
+		<run>
+			<include name="basic" />
+			<include name="function" />
+		</run>
+	</groups>
+ 
+	<classes>
+		<class name="movie_api.testGetMovieData" />
+		<class name="movie_api.testGetResponseCode" />
+		<class name="movie_api.testPostMovieData" />
+		<class name="movie_api.testMoviewSumGenre_ids" />
+		<class name="movie_api.testPalindromeWordInTitle" />
+		<class name="movie_api.testParamCountNum" />
+		<class name="movie_api.testSortMovie" />
+		<class name="movie_api.testTileContainsOtherTitle" />
+		<class name="movie_api.testVerifyUniquePostImage" />
+	</classes>
+	
+  </test>
+  
+</suite>
