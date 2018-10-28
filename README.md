@@ -1,31 +1,5 @@
 # movie_api
 
-<< Background >>
-CompanyS has decided to diversify its product line and go into the movie data business. We are collecting movie information from a variety of sources and exposing REST API to enable anyone to be able fetch these details. In addition, users can also submit movie information. CompanyS is using some fancy ML algorithms to process the submission and add to our movie database. 
-
-Movie API Details:
-Endpoint: https://splunk.mocklab.io/movies
-
-GET /movie: Returns CompanyS’s entire collection of movies
-
-Parameters
-Name	Required	Description	Internal CompanyS Notes
-  q	  Required	Movie name	Currently, the API only supports q=’batman’. 
-count	optional	Limits number of records in the response. Count = 0 mean return all records	
-
-Headers:
-Must pass headers: Accept = application/json
-
-POST /movie: Allows anyone to submit a movie and it’s description for processing. Once posted, the movie will appear in the GET /movie API 
-
-Payload:
-name: <string> (required)
-description: <string>	(required)
-
-Headers:
-Must pass headers: Content-Type = application/json
-
-
 << How to Run >>
 1. Check out the develop branch of movie_api repository
 2. Open the Maven project using Eclipse
@@ -33,8 +7,34 @@ Must pass headers: Content-Type = application/json
 4. Execute each java class by TestNG
 
 
+
 << Bug Found >>
 1. Bug-001 - parameter "count" does not work. The response is always have all movies (total 16),
    no matter the count value (not 0, like 1 or 10)
 2. Bug-002 - parameter "q" can be set as other title without any message, but the response ia always as the same as "batman"
 3. Bug-003 - poster_path link is not available for some movies
+
+
+
+<< Test execution report >>
+SPL-001: No two movies should have the same image 
+
+Test result: Same image not found. 
+
+SPL-002: All poster_path links must be valid. poster_path link of null is also acceptable
+Test result: Several movies do not have images links. Bug-003 logged.
+
+SPL-003: Sorting requirement. Rule #1 Movies with genre_ids == null should be first in response. Rule #2, if multiple movies have genre_ids == null, then sort by id (ascending). For movies that have non-null genre_ids, results should be sorted by id (ascending)
+
+Test result: sort test case added.
+
+SPL-004: The number of movies whose sum of "genre_ids" > 400 should be no more than 7. Another way of saying this is: there at most 7 movies such that their sum of genre_ids is great than 400
+Test result: No more than 7 result confirmed.
+SPL-005: There is at least one movie in the database whose title has a palindrome in it. 
+Example: "title": "Batman: Return of the Kayak Crusaders". The title contains ‘kayak’ which is a palindrome.
+
+Test result: Found palindrome word in title.
+
+SPL-006: There are at least two movies in the database whose title contain the title of another movie. Example: movie id: 287757 (Scooby-Doo Meets Dante), movie id: 404463 (Dante). This example shows one such set. The business requirement is that there are at least two such occurrences. 
+
+Test result: Confirmed there are at least two movies whose title contain the title of another movie.
